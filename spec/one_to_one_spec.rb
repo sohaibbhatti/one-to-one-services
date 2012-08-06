@@ -8,4 +8,5 @@ describe OneToOne::ApiMethod do
   it 'Validates API is active' do
     OneToOne::ApiMethod.api_active?.should == true
   end
+
 end
