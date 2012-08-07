@@ -1,7 +1,7 @@
 require 'savon'
-
+require 'one_to_one/request/base'
 module OneToOne
-  class UserService
+  class UserService < Request::Base
     class << self
 
       def ping_service
@@ -12,12 +12,6 @@ module OneToOne
 
       def api_active?
         ping_service.is_a? DateTime
-      end
-
-      def load_wsdl (wsdl_name = :user)
-        raise 'Invalid wsdl name provided' unless [:user, :card, :account, :order].include? wsdl_name
-        base_wsdl_url = "http://localhost:9999/svbase4api/#{wsdl_name.to_s.capitalize}Service?WSDL"
-        Savon::Client.new(base_wsdl_url)
       end
 
       # Used to create a user and his corresponding card and account.
