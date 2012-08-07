@@ -1,6 +1,6 @@
 require 'one_to_one'
 
-describe OneToOne::ApiMethod do
+describe OneToOne::UserService do
   it 'Pings the service' do
     OneToOne::ApiMethod.ping_service.should be_a(DateTime)
   end

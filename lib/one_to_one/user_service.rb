@@ -1,7 +1,7 @@
 require 'savon'
 
 module OneToOne
-  class ApiMethod
+  class UserService
     class << self
 
       def ping_service
