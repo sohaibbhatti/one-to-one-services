@@ -16,5 +16,6 @@ Gem::Specification.new do |gem|
   gem.version       = OneToOne::VERSION
 
   gem.add_development_dependency 'rspec', '~> 2.6'
+  gem.add_development_dependency 'savon_spec'
   gem.add_dependency 'savon'
 end

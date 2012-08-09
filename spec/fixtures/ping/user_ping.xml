@@ -1,0 +1,7 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <ns2:PingResponse xmlns:ns2="http://userservice.api.svbase4.tech121.com">
+         <PingResponse>2012-08-09T15:42:21.913-05:00</PingResponse>
+      </ns2:PingResponse>
+   </S:Body>
+</S:Envelope>
