@@ -8,7 +8,6 @@ module OneToOne
           base_wsdl_url = "http://localhost:9999/svbase4api/#{wsdl_name.to_s.capitalize}Service?WSDL"
           Savon::Client.new(base_wsdl_url)
         end
-
       end
 
     end

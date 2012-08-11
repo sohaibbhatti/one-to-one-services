@@ -1,5 +1,6 @@
 require 'savon'
 require 'one_to_one/request/base'
+
 module OneToOne
   class UserService < Request::Base
     class << self
