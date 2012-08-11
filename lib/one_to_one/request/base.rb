@@ -11,5 +11,9 @@ module OneToOne
       end
 
     end
+
+    class RequestError < RunTimeError
+      attr_reader :response_error
+    end
   end
 end
