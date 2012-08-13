@@ -3,7 +3,7 @@ require 'spec_helper'
 
 #ssh -L 9999:65.182.173.79:8080 deploy@testing2.moviepass.com
 
-describe OneToOne::UserService do
+describe OneToOne::Request::UserService do
   let(:user) { Savon::Client.new "http://localhost:9999/svbase4api/UserService?WSDL" }
 
   describe 'mocks the Ping SOAP request' do
@@ -16,11 +16,11 @@ describe OneToOne::UserService do
     end
 
     it 'pings the API service' do
-      OneToOne::UserService.ping_service.should be_a(DateTime)
+      OneToOne::Request::UserService.ping_service.should be_a(DateTime)
     end
 
     it 'provides information of the api being active' do
-      OneToOne::UserService.api_active?.should == true
+      OneToOne::Request::UserService.api_active?.should == true
     end
   end
 end
