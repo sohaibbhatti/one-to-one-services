@@ -27,6 +27,27 @@ module OneToOne
           response.success?
         end
 
+        # add check for card status
+        def change_card_status(card_key, status, reason = nil)
+          client = load_wsdl :card
+          response = client.request :car, 'ChangeCardStatus',
+            :body => {
+            'credential' => credentials,
+            'cardId' => card_key,
+            'cardStatus' => status,
+            'cardStatusReason' => reason
+          }
+        end
+
+        def get_card_status(card_key)
+          client = load_wsdl :card
+          response = client.request :car, 'GetCardStatus',
+            :body => {
+            'credential' => credentials,
+            'cardId' => card_key
+          }
+        end
+
         def credentials
           { 'clientName' => CLIENTNAME, 'userName' => USERNAME, 'password' => PASSWORD }
         end

@@ -51,7 +51,22 @@ describe OneToOne::Request::CardService do
     end
 
     it 'changes the card status via API service' do
-      result = OneToOne::Request::CardService.change_card_status
+      result = OneToOne::Request::CardService.change_card_status 12345, 1
+    end
+  end
+
+  describe 'mocks the GetCardStatus SOAP request' do
+    before do
+      get_card_status = savon 
+      get_card_status.expects('GetCardStatus').with do |request|
+        contains_credentials request
+
+        request.soap.body.should include('cardId')
+      end
+    end
+
+    it 'gets the card status via API service' do
+      result = OneToOne::Request::CardService.get_card_status 12345
     end
   end
 end
