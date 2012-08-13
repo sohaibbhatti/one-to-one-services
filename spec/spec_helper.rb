@@ -11,7 +11,7 @@ OneToOne::Request::UserService.class_eval do
 end
 
 
-Rspec.configure do |config|
+RSpec.configure do |config|
   config.include Savon::Spec::Macros
 end
 
