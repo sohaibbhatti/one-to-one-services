@@ -1,4 +1,4 @@
-# OneToOne
+# OneToOneServices
 
 TODO: Write a gem description
 
