@@ -1,6 +1,8 @@
 # OneToOneServices
 
-TODO: Write a gem description
+Ruby wrapper for OneTo One Card services. Project being shelved due to
+the high degree of variance depending on the configuration of customers.
+If need be though, code for specific methods can be reused.
 
 ## Installation
 
